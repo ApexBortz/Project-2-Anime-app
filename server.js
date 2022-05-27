@@ -54,11 +54,27 @@ app.use(async (req, res, next) => {
 // routes
 app.get('/', (req, res) => {
   // console.log(res.locals)
+  // throw new Error('whoops')
   res.render('index')
 })
 
 // controllers
 app.use('/users', require('./controllers/users'))
+
+// 404 error handlers -- NEEDS TO GO LAST
+app.use((req, res, next) => {
+  // render a 404 template
+  res.status(404).render('views/404.ejs')
+  // res.status(500).render('500.ejs')
+})
+
+app.use((error, req, res, next) => {
+  // render a 404 template
+  console.log(error)
+  // res.status(404).render('views/404.ejs')
+  res.status(500).render('500.ejs')
+})
+
 
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
