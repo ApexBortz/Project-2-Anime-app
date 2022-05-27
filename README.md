@@ -38,19 +38,19 @@ Love Anime? Me too! Did you know that characters, conflicts, storylines and othe
 | Verb | Path | Action | Decription |
 | ---- | ---- | ---- | ---- |
 | Get | /signup | show | display sign up form |
-
+| ---- | ---- | ---- | ---- |
 | Post | /signup | create | creates new user |
-
+| ---- | ---- | ---- | ---- |
 | Get | /login | show | displays log in form |
-
+| ---- | ---- | ---- | ---- |
 | Put | /login | update | clear cookies to auth user |
-
+| ---- | ---- | ---- | ---- |
 | Get | /search  | index | anime title search form |
-
+| ---- | ---- | ---- | ---- |
 | Get | /search/:id | show | show facts about anime |
-
+| ---- | ---- | ---- | ---- |
 | Put | /search/:id | update | updates users favorites |
-
+| ---- | ---- | ---- | ---- |
 | Get | /favorites | show | show user profile & favorite facts |
-
+| ---- | ---- | ---- | ---- |
 | Delete | /favorites | destroy | delete a saved fact from user favs |
