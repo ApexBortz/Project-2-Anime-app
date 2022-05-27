@@ -36,9 +36,9 @@ Love Anime? Me too! Did you know that characters, conflicts, storylines and othe
 # REST Routes
 
 | Verb | Path | Action | Decription |
-
+---
 | Get | /signup | show | display sign up form |
-
+---
 | Post | /signup | create | creates new user |
 
 | Get | /login | show | displays log in form |
