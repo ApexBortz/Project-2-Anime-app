@@ -10,12 +10,12 @@ User Stories
 - As a user i want to be able to save favorited facts
 - As a user i want to be able to see the facts i have saved and which anime they are from
 
-![Sign Up](./imgs/animefaxxSignup.jpg)
+![Sign Up](./imgs/animefaxxSignup.jpeg)
 
-![Log In](./imgs/animefaxxLogin.jpg)
+![Log In](./imgs/animefaxxLogin.jpeg)
 
-![Search Page](./imgs/animefaxxSearch.jpg)
+![Search Page](./imgs/animefaxxSearch.jpeg)
 
-![Results Page](./imgs/animefaxxResults.jpg)
+![Results Page](./imgs/animefaxxResults.jpeg)
 
-![Favorite Faxx](./imgs/animefaxxFavs.jpg)
+![Favorite Faxx](./imgs/animefaxxFavs.jpeg)
