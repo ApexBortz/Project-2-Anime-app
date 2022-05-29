@@ -47,3 +47,8 @@ Love Anime? Me too! Did you know that characters, conflicts, storylines and othe
 | Get | /favorites | show | show user profile & favorite facts |
 | Post | /favorites | create | saves fact to favorites in user profile |
 | Delete | /favorites | destroy | delete a saved fact from user favs |
+| Post | /comments | create | creates new comment on favorited facts |
+
+# ERD
+
+![ERD](./imgs/erd1.png)
