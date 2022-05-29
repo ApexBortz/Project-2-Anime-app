@@ -45,4 +45,5 @@ Love Anime? Me too! Did you know that characters, conflicts, storylines and othe
 | Get | /search/:id | show | show facts about anime |
 | Put | /search/:id | update | updates users favorites |
 | Get | /favorites | show | show user profile & favorite facts |
+| Post | /favorites | create | saves fact to favorites in user profile |
 | Delete | /favorites | destroy | delete a saved fact from user favs |
