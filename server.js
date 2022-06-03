@@ -58,7 +58,6 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-
 // controllers
 app.use('/users', require('./controllers/users'))
 
@@ -77,7 +76,6 @@ app.use((error, req, res, next) => {
   // res.status(404).render('views/404.ejs')
   res.status(500).render('500.ejs')
 })
-
 
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);

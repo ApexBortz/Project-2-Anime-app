@@ -9,7 +9,6 @@ sequelize model:create --name faveFact --attributes anime_name:string,fact_id:in
 
 sequelize model:create --name comment --attributes anime_name:string,anime_id:integer,fact_id:integer,content:text
 
-
 models.faveFacts.belongsTo(models.users)
 models.faveFacts.hasMany(models.comment)
 
