@@ -58,6 +58,7 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+
 // controllers
 app.use('/users', require('./controllers/users'))
 

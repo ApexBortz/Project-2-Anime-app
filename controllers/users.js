@@ -9,6 +9,7 @@ router.get('/new', (req, res) => {
 	res.render('users/new.ejs', { msg: null })
 })
 
+
 // POST /users -- creates a new user and redirects to index
 router.post('/', async (req, res) => {
 	try {

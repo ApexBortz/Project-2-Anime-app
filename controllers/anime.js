@@ -17,6 +17,7 @@ router.get('/search/:animeId', (req, res) => {
 	// res.render('users/new.ejs', { msg: null })
 })
 
+
 router.put('/search/:animeId', (req, res) => {
     const animeId = req.params.animeId
     const factData = req.body
