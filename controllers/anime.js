@@ -46,14 +46,12 @@ router.get('/favorites', (req, res) => {
 })
 
 router.delete('/favorites/:favoritesId', (req, res) => {
-    const faveID = req.params.favoritesId
+    const faveId = req.params.favoritesId
     db.favorites.delete({
         include: faveId
     })
         .then(result => res.json(result))
 })
-
-
 
 
 module.exports = router
