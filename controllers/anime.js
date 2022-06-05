@@ -8,6 +8,23 @@ router.get('/', (req, res) => {
 	// res.render('users/new.ejs', { msg: null })
 })
 
+// router.get('/', (req, res)=>{
+//     let anime = fs.readFileSync('./anime.json')
+//     let animeData = JSON.parse(anime)
+
+//     let nameFilter = req.query.nameFilter
+//     if(nameFilter) {
+//         animeData = animeData.filter(anime=>anime.name.toLowerCase()===nameFilter.toLowerCase())
+//     }
+
+//     res.render('dinosaurs/index.ejs', {myDinos: dinoData})
+// })
+
+//display search form
+router.get('/new', async (req, res) => {
+    res.render('authors/new')
+  })
+
 router.get('/search/:animeId', (req, res) => {
     const animeId = req.params.animeId
     db.user.findOne({
@@ -33,14 +50,10 @@ router.put('/search/:animeId', (req, res) => {
 	
 })
 
-router.get('/favorites', (req, res) => {
+router.post('/favorites', (req, res) => {
     const userId = req.body
-    db.favorites.findAll({
-        include: [
-            {
-                model: userId
-            }
-        ]
+    db.faveFact.create({
+        
     })
         .then(result => res.json(result))
 })
