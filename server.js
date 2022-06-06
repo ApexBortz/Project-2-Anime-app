@@ -61,6 +61,7 @@ app.get('/', (req, res) => {
 // controllers
 app.use('/users', require('./controllers/users'))
 app.use('/anime', require('./controllers/anime'))
+app.use('/faveFact', require('./controllers/faveFact'))
 
 // 404 error handlers -- NEEDS TO GO LAST
 app.use((req, res, next) => {
