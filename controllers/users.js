@@ -9,7 +9,6 @@ router.get('/new', (req, res) => {
 	res.render('users/new.ejs', { msg: null })
 })
 
-
 // POST /users -- creates a new user and redirects to index
 router.post('/', async (req, res) => {
 	try {
@@ -29,7 +28,7 @@ router.post('/', async (req, res) => {
 			const encryptedId = cryptoJS.AES.encrypt(user.id.toString(), process.env.ENC_KEY).toString()
 			res.cookie('userId', encryptedId)
 			// redirect to the homepage (in the future this could redirect elsewhere)
-			res.redirect('/users/profile')
+			res.redirect(301, '/users/profile')
 		} else {
 		// if the user was not created
 			// re render the login form with a message for the user
