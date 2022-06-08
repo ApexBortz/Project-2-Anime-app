@@ -29,6 +29,7 @@ router.post('/', async (req, res) => {
 			res.cookie('userId', encryptedId)
 			// redirect to the homepage (in the future this could redirect elsewhere)
 			res.redirect(301, '/users/profile')
+			// console.log('created')
 		} else {
 		// if the user was not created
 			// re render the login form with a message for the user
