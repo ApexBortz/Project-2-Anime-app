@@ -15,9 +15,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   comment.init({
-    anime_name: DataTypes.STRING,
-    anime_id: DataTypes.INTEGER,
-    fact_id: DataTypes.INTEGER,
+    animeName: DataTypes.STRING,
+    animeId: DataTypes.INTEGER,
+    factId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
     content: DataTypes.TEXT
   }, {
     sequelize,

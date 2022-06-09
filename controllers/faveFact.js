@@ -2,12 +2,10 @@ const express = require('express')
 const router = express.Router()
 const db = require('../models')
 
-router.post('/favorites', (req, res) => {
-    const userId = req.body
-    db.faveFact.create({
-        
-    })
-        .then(result => res.json(result))
+router.post('/', (req, res) => {
+        // look at omdb pt 2
+        // accept form data in the req.body & save to favorites database (await db.favefact.create)
+        // res.redirect to the users profile
 })
 
 router.delete('/favorites/:favoritesId', (req, res) => {

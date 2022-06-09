@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.faveFact.hasOne(models.user)
+      models.faveFact.belongsTo(models.user)
       models.faveFact.hasMany(models.comment)
     }
   }
   faveFact.init({
-    anime_name: DataTypes.STRING,
-    fact_id: DataTypes.INTEGER,
+    animeName: DataTypes.STRING,
+    factId: DataTypes.INTEGER,
     fact: DataTypes.TEXT,
-    user_id: DataTypes.INTEGER
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'faveFact',

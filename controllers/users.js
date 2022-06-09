@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
 			const encryptedId = cryptoJS.AES.encrypt(user.id.toString(), process.env.ENC_KEY).toString()
 			res.cookie('userId', encryptedId)
 			// redirect to the homepage (in the future this could redirect elsewhere)
-			res.redirect(301, '/users/profile')
+			res.redirect('/users/profile')
 			// console.log('created')
 		} else {
 		// if the user was not created
@@ -88,15 +88,18 @@ router.get('/logout', (req, res) => {
 	res.redirect('/')
 })
 
-router.get('/profile', (req, res) => {
+router.get('/profile', async (req, res) => {
 	// check if user is authorized
 	if (!res.locals.user) {
 		// if the user is not authorized, ask them to log in
 		res.render('users/login.ejs', { msg: 'please log in to continue' })
 		return // end the route here
 	}
-
-	res.render('users/profile', { user: res.locals.user })
+	// find currently logged in users favorites
+	const favorites = await res.locals.user.getFaveFacts()
+	// render the favorites on the profile page
+	console.log(favorites)
+	res.render('users/profile', { user: res.locals.user, favorites: favorites })
 })
 
 module.exports = router

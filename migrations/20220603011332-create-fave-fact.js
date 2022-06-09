@@ -8,10 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      anime_name: {
+      animeName: {
         type: Sequelize.STRING
       },
-      fact_id: {
+      factId: {
+        type: Sequelize.INTEGER
+      },
+      userId: {
         type: Sequelize.INTEGER
       },
       fact: {
