@@ -99,7 +99,7 @@ router.get('/profile', async (req, res) => {
 	const favorites = await res.locals.user.getFaveFacts()
 	// render the favorites on the profile page
 	console.log(favorites)
-	res.render('users/profile', { user: res.locals.user, favorites: favorites })
+	res.render('users/profile', { user: res.locals.user, faveFacts: favorites })
 })
 
 module.exports = router

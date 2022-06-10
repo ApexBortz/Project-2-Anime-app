@@ -3,12 +3,15 @@
 
 <% facts.forEach(fact => { %>
     <div>
-        <h2><%= anime.name %></h2>
 
-        <h4>birth year: <%= person.birth_year %> </h4>
+        <h2><%= fact.fact %> <%= fact.fact_id %></h2>
 
-        <h4>hair color: <%= person.hair_color %> </h4>
-
+        <form method="POST" action="/faveFact">
+            <input hidden value="<%= input %>" name="animeName" />
+            <input hidden value="<%= fact.fact_id %>" name="factId"/>
+            <input hidden value="<%= fact.fact %>" name="fact"/>
+            <button type="submit">Fave this fact</button>
+        </form>
 
     </div>
 <% }) %>

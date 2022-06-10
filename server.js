@@ -5,6 +5,7 @@ const rowdy = require('rowdy-logger')
 const cookieParser = require('cookie-parser')
 const db = require('./models')
 const cryptoJS = require('crypto-js')
+var methodOverride = require('method-override')
 
 // app config
 const PORT = process.env.PORT || 3000
@@ -16,6 +17,8 @@ const rowdyRes = rowdy.begin(app)
 app.use(require('express-ejs-layouts'))
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
+
+app.use(methodOverride('_method'))
 
 // DIY middleware
 // happens on every request
@@ -66,7 +69,7 @@ app.use('/faveFact', require('./controllers/faveFact'))
 // 404 error handlers -- NEEDS TO GO LAST
 app.use((req, res, next) => {
   // render a 404 template
-  res.status(404).render('views/404.ejs')
+  res.status(404).render('404.ejs')
   // res.status(500).render('500.ejs')
 })
 

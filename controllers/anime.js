@@ -1,5 +1,5 @@
 const express = require('express')
-// const axios = require('axios')
+const axios = require('axios')
 const router = express.Router()
 const db = require('../models')
 
@@ -10,24 +10,22 @@ router.get('/', (req, res) => {
     res.render('search.ejs')
 })
 
-router.get('/search', async (req, res) => {
+router.get('/results', async (req, res) => {
     // accepts data from search form using the req.query
     // uses axios to get data from the anime api
     // renders the search data from the api (results) (omdb pt 1 and starwars code along data into search values)
     try {
-        const searchUrl = `https://anime-facts-rest-api.herokuapp.com/api/v1/${req.query.userInput}`
-        // const response = await axios.get(searchUrl)
-
+        const searchUrl = `https://anime-facts-rest-api.herokuapp.com/api/v1/${req.query.animeSearch}`
+        const response = await axios.get(searchUrl)
+         console.log('RESPONSE DATA >>>>',response.data.data)
         res.render('results.ejs', {
-            anime: response.data.results,
-            input: req.query.userInput
+            facts: response.data.data,
+            input: req.query.animeSearch
         })
     } catch(err) {
         console.log(err)
     }
 })
-
-
 
 // router.get('/', (req, res)=>{
 //     let anime = fs.readFileSync('./anime.json')
