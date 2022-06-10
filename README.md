@@ -50,21 +50,6 @@ Enjoy learning more about anime!!!
     - Crypto-JS
 - Heroku Deployment
 
-# Sign Up
-![Sign Up](./imgs/animefaxxSignup.jpeg)
-
-# Log In
-![Log In](./imgs/animefaxxLogin.jpeg)
-
-# Search
-![Search Page](./imgs/animefaxxSearch.jpeg)
-
-# Results
-![Results Page](./imgs/animefaxxResults.jpeg)
-
-# User's Favorite Faxx
-![Favorite Faxx](./imgs/animefaxxFavs.jpeg)
-
 # REST Routes
 
 │ Method │ Path │ Verb |
@@ -93,14 +78,42 @@ Enjoy learning more about anime!!!
 
 │ Get │ /faveFact/favorites │ Shows User favorite facts |
 
-│ Ddelet │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
+│ Delete │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
 
 │ Post │ /comment/newComment │ Comments on a favorited fact |
 
 
-# ERD
-
-![ERD](./imgs/erd1.png)
+┌────────┬──────────────────────────────────┐
+│ Method │ Path                             │
+├────────┼──────────────────────────────────┤
+│ GET    │ /users/new                       │
+├────────┼──────────────────────────────────┤
+│ POST   │ /users                           │
+├────────┼──────────────────────────────────┤
+│ GET    │ /users/login                     │
+├────────┼──────────────────────────────────┤
+│ POST   │ /users/login                     │
+├────────┼──────────────────────────────────┤
+│ GET    │ /users/logout                    │
+├────────┼──────────────────────────────────┤
+│ GET    │ /users/profile                   │
+├────────┼──────────────────────────────────┤
+│ GET    │ /users/update                    │
+├────────┼──────────────────────────────────┤
+│ POST   │ /users/update                    │
+├────────┼──────────────────────────────────┤
+│ GET    │ /anime                           │
+├────────┼──────────────────────────────────┤
+│ GET    │ /anime/results                   │
+├────────┼──────────────────────────────────┤
+│ POST   │ /faveFact                        │
+├────────┼──────────────────────────────────┤
+│ GET    │ /faveFact/favorites              │
+├────────┼──────────────────────────────────┤
+│ DELETE │ /faveFact/favorites/:favoritesId │
+├────────┼──────────────────────────────────┤
+│ POST   │ /comment/newComment              │
+└────────┴──────────────────────────────────┘
 
 # Project Setup
 - Fork and clone this repo
@@ -118,3 +131,21 @@ Enjoy learning more about anime!!!
     - use sequelize model:create with the name and attributes matching those in the models folders
     - migrate models using sequelize db:migrate
 - Project is now ready to deploy!
+
+# ERD
+![ERD](./imgs/erd1.png)
+
+# Sign Up
+![Sign Up](./imgs/animefaxxSignup.jpeg)
+
+# Log In
+![Log In](./imgs/animefaxxLogin.jpeg)
+
+# Search
+![Search Page](./imgs/animefaxxSearch.jpeg)
+
+# Results
+![Results Page](./imgs/animefaxxResults.jpeg)
+
+# User's Favorite Faxx
+![Favorite Faxx](./imgs/animefaxxFavs.jpeg)
