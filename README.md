@@ -68,33 +68,19 @@ Enjoy learning more about anime!!!
 # REST Routes
 
 │ Method │ Path │ Verb | Description |
-|      |      |      |      |
 │ GET │ /users/new │ Sign up form |
-
 │ POST │ /users │ Creates new user |
-
 │ GET │ /users/login │ Log in form |
-
 │ POST │ /users/login │ Authenticates user |
-
 │ GET │ /users/logout │ Logs user out |
-
 │ GET │ /users/profile │ Shows user profile |
-
 │ GET │ /users/update │ Displays password update form |
-
 │ POST │ /users/update │ Updates user password |
-
 │ GET │ /anime │ Displays anime search form |
-
 │ GET │ /anime/results │ Displays search results |
-
 │ POST │ /faveFact │ Adds a fact to users faves |
-
 │ GET │ /faveFact/favorites │ Shows User favorite facts |
-
 │ DELETE │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
-
 │ POST │ /comment/newComment │ Comments on a favorited fact |
 
 
