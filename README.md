@@ -68,34 +68,34 @@ Enjoy learning more about anime!!!
 # REST Routes
 
 │ Method │ Path │ Verb |
-|      |      |      |
-│ GET │ /users/new │ Sign up form |
-|      |      |      |
-│ POST │ /users │ Creates new user |
-|      |      |      |
-│ GET │ /users/login │ Log in form |
-|      |      |      |
-│ POST │ /users/login │ Authenticates user |
-|      |      |      |
-│ GET │ /users/logout │ Logs user out |
-|      |      |      |
-│ GET │ /users/profile │ Shows user profile |
-|      |      |      |
-│ GET │ /users/update │ Displays password update form |
-|      |      |      |
-│ POST │ /users/update │ Updates user password |
-|      |      |      |
-│ GET │ /anime │ Displays anime search form |
-|      |      |      |
-│ GET │ /anime/results │ Displays search results |
-|      |      |      |
-│ POST │ /faveFact │ Adds a fact to users faves |
-|      |      |      |
-│ GET │ /faveFact/favorites │ Shows User favorite facts |
-|      |      |      |
-│ DELETE │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
-|      |      |      |
-│ POST │ /comment/newComment │ Comments on a favorited fact |
+
+│ Get │ /users/new │ Sign up form |
+
+│ Post │ /users │ Creates new user |
+
+│ Get │ /users/login │ Log in form |
+
+│ Post │ /users/login │ Authenticates user |
+
+│ Get │ /users/logout │ Logs user out |
+
+│ Get │ /users/profile │ Shows user profile |
+
+│ Get │ /users/update │ Displays password update form |
+
+│ Post │ /users/update │ Updates user password |
+
+│ Get │ /anime │ Displays anime search form |
+
+│ Get │ /anime/results │ Displays search results |
+
+│ Post │ /faveFact │ Adds a fact to users faves |
+
+│ Get │ /faveFact/favorites │ Shows User favorite facts |
+
+│ Ddelet │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
+
+│ Post │ /comment/newComment │ Comments on a favorited fact |
 
 
 # ERD
