@@ -26,11 +26,21 @@ router.get('/favorites', async (req, res) => {
 		return // end the route here
 	}
 	// find currently logged in users favorites
-	const favorites = await res.locals.user.getFaveFacts()
-	
+	const favorites = await res.locals.user.getFaveFacts();
+    
+	const comments = await db.comment.findAll({
+        where: {
+            userId: res.locals.user.id
+        }
+    })
+    // console.log(comments)
 	// render the favorites on the profile page
-	// console.log('favorites')
-	res.render('users/favorites.ejs', { user: res.locals.user, faveFacts: favorites })
+	// console.log(comments)
+	res.render('users/favorites.ejs', { 
+        user: res.locals.user, 
+        faveFacts: favorites,
+        comments: comments 
+    })
 })
 
 router.delete('/favorites/:favoritesId', async (req, res) => {

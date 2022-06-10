@@ -6,12 +6,19 @@
     
             <h2><%= faveFact.fact %></h2>
             <h3><%= faveFact.animeName %></h3>
+            <h5>Comments:</h5>
+            <% comments.forEach(comment =>{ %>
+                <p><% if(comment.animeId === faveFact.id){ %>
+                        <%= comment.content %> 
+                <% } %>      
+                </p>
+            <% }) %>
 
             <form method="POST" action="/faveFact/favorites/<%= faveFact.id %>?_method=delete">
                 <button type="submit">Delete this Fave</button>
             </form>
 
-            <form method="POST" action="/faveFacts/<%= faveFact.id %>/comment">
+            <form method="POST" action="/comment/newComment">
                 <input type="text" id="content" name="content" required />
                 <input hidden value="<%= faveFact.animeName %>" name="animeName"/>
                 <input hidden value="<%= faveFact.id %>" name="factId"/>

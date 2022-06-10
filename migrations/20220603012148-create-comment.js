@@ -30,6 +30,9 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      faveFactId: {
+        type: Sequelize.STRING
       }
     });
   },

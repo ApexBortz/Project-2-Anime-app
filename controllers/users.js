@@ -110,5 +110,21 @@ router.get('/profile', async (req, res) => {
 	res.render('users/profile', { user: res.locals.user })
 })
 
+router.get('/update', async(req, res)=>{
+    console.log('updateeeeeee')
+    res.render('users/update')
+})
+
+router.post('/update', async(req,res)=>{
+    
+    const user = res.locals.user
+    // console.log(user, req.body.password, user.password)
+    const hashedPassword = bcrypt.hashSync(req.body.password, 12)
+    // console.log(hashedPassword)
+    user.password = hashedPassword
+    await user.save()
+    res.redirect('./profile')
+})
+
 
 module.exports = router

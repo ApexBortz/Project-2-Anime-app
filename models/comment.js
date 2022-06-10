@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.comment.belongsTo(models.faveFact)
+      models.comment.belongsTo(models.user)
     }
   }
   comment.init({
@@ -19,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     animeId: DataTypes.INTEGER,
     factId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    content: DataTypes.TEXT
+    content: DataTypes.TEXT,
+    faveFactId: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'comment',
