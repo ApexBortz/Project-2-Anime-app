@@ -67,7 +67,7 @@ Enjoy learning more about anime!!!
 
 # REST Routes
 
-│ Method │ Path │ Verb | Description |
+│ Method │ Path │ Verb |
 
 │ GET │ /users/new │ Sign up form |
 
