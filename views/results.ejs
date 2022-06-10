@@ -4,7 +4,7 @@
 <% facts.forEach(fact => { %>
     <div>
 
-        <h2><%= fact.fact %> <%= fact.fact_id %></h2>
+        <h2><%= fact.fact %> </h2>
 
         <form method="POST" action="/faveFact">
             <input hidden value="<%= input %>" name="animeName" />

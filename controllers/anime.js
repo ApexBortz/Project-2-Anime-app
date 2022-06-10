@@ -17,7 +17,7 @@ router.get('/results', async (req, res) => {
     try {
         const searchUrl = `https://anime-facts-rest-api.herokuapp.com/api/v1/${req.query.animeSearch}`
         const response = await axios.get(searchUrl)
-         console.log('RESPONSE DATA >>>>',response.data.data)
+        
         res.render('results.ejs', {
             facts: response.data.data,
             input: req.query.animeSearch

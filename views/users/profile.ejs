@@ -2,23 +2,6 @@
 
 <h3>Thanks for being a user, <%= user.email %>! 😎</h3>
 
-<h2> Your Favorite Facts: </h2>
-
-<ul> 
-    <% faveFacts.forEach(faveFact => { %>
-        <div>
-    
-            <h2><%= faveFact.fact %></h2>
-            <h3><%= faveFact.animeName %></h3>
-
-            <form method="POST" action="/faveFact/favorites/<%= faveFact.id %>?_method=delete">
-                <button type="submit">Delete this Fave</button>
-            </form>
-
-            <form method="POST" action="/faveFact/favorites/<%= faveFact.id %>?_method=delete">
-                <button type="submit">Comment</button>
-            </form>
-    
-        </div>
-    <% }) %>
-</ul>
+<li>
+    <a href="/faveFact/favorites">Your Favorites</a>
+</li>

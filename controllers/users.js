@@ -96,10 +96,19 @@ router.get('/profile', async (req, res) => {
 		return // end the route here
 	}
 	// find currently logged in users favorites
-	const favorites = await res.locals.user.getFaveFacts()
-	// render the favorites on the profile page
-	console.log(favorites)
-	res.render('users/profile', { user: res.locals.user, faveFacts: favorites })
+	// const favorites = await res.locals.user.getFaveFacts()
+	// const comments = await db.comment.findAll({
+    //     where:{
+    //         userId: res.locals.user.id,
+    //     },
+	// 	default :{
+
+	// 	}
+    // })
+	// // render the favorites on the profile page
+	// console.log(favorites)
+	res.render('users/profile', { user: res.locals.user })
 })
+
 
 module.exports = router

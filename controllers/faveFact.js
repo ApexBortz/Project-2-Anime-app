@@ -3,8 +3,7 @@ const router = express.Router()
 const db = require('../models')
 
 router.post('/', async (req, res) => {
-        // look at omdb pt 2
-        // accept form data in the req.body & save to favorites database (await db.favefact.create)
+        // accept form data in the req.body & save to favorites database
       try{
         const faveFact = await db.faveFact.create({
             factId: req.body.factId,
@@ -20,11 +19,19 @@ router.post('/', async (req, res) => {
       // res.redirect to the users profile
 })
 
-router.get('/:favoritesId', (req, res) => {
-    
-    res.render('search.ejs')
+router.get('/favorites', async (req, res) => {
+    if (!res.locals.user) {
+		// if the user is not authorized, ask them to log in
+		res.render('users/login.ejs', { msg: 'please log in to continue' })
+		return // end the route here
+	}
+	// find currently logged in users favorites
+	const favorites = await res.locals.user.getFaveFacts()
+	
+	// render the favorites on the profile page
+	// console.log('favorites')
+	res.render('users/favorites.ejs', { user: res.locals.user, faveFacts: favorites })
 })
-
 
 router.delete('/favorites/:favoritesId', async (req, res) => {
     const faveId = req.params.favoritesId
