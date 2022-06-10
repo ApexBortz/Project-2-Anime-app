@@ -79,23 +79,23 @@ Enjoy learning more about anime!!!
 
 │ GET │ /users/logout │ Logs user out |
 
-│ GET    │ /users/profile │ Shows user profile |
+│ GET │ /users/profile │ Shows user profile |
 
-│ GET    │ /users/update │ Displays password update form |
+│ GET │ /users/update │ Displays password update form |
 
-│ POST   │ /users/update │ Updates user password |
+│ POST │ /users/update │ Updates user password |
 
-│ GET    │ /anime │ Displays anime search form |
+│ GET │ /anime │ Displays anime search form |
 
-│ GET    │ /anime/results │ Displays search results |
+│ GET │ /anime/results │ Displays search results |
 
-│ POST   │ /faveFact │ Adds a fact to users faves |
+│ POST │ /faveFact │ Adds a fact to users faves |
 
-│ GET    │ /faveFact/favorites │ Shows User favorite facts |
+│ GET │ /faveFact/favorites │ Shows User favorite facts |
 
-│ DELETE │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact
+│ DELETE │ /faveFact/favorites/:favoritesId │ Deletes a favorited Fact |
 
-│ POST   │ /comment/newComment │ Comments on a favorited fact |
+│ POST │ /comment/newComment │ Comments on a favorited fact |
 
 
 # ERD
